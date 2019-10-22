@@ -25,13 +25,18 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - name: npm install, lint and test
       run: |
-        npm install
+        npm ci
         npm run lint
         npm run start -- --site=wordpress-at-scale
       env:
         CI: true
     - name: Archive BackstopJS artifacts
       uses: actions/upload-artifact@v1
+      with:
+        name: backstop_data
+        path: backstop_data
+    - name: Upload BackstopJS artifacts
+      uses: actions/upload-artifact@master
       with:
         name: backstop_data
         path: backstop_data
