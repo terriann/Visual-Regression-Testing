@@ -1,7 +1,7 @@
 {
   "name": "backstopjs-node-app",
   "version": "1.0.0",
-  "description": "This repository is an example for my workshop \"Automating your QA with Visual Regression Testing\" at WordCamp Europe 2019.",
+  "description": "This repository is an example for the workshop \"Automating your QA with Visual Regression Testing\".",
   "main": "src/index.js",
   "dependencies": {
     "ansi-colors": "^4.1.1",

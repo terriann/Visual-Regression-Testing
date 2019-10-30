@@ -1,6 +1,6 @@
 # Automating your QA with Visual Regression Testing Example Repository
 
-This repository is an example for my talk/workshop Automating your QA with Visual Regression Testing. The slides that accompany this repository can be found [here](https://bit.ly/ataylorme-visual-regression-workshop).
+This repository is an example for the workshop Automating your QA with Visual Regression Testing. The slides that accompany this repository can be found [here](https://bit.ly/ataylorme-visual-regression-workshop).
 
 [BackstopJS](https://github.com/garris/BackstopJS/) is used for the visual regression testing. The app itself is built with [Node JS](https://nodejs.org/), [`commander.js`](https://github.com/tj/commander.js/), and [`Inquirer.js`](https://github.com/SBoudrias/Inquirer.js).
 
@@ -9,13 +9,12 @@ This repository is an example for my talk/workshop Automating your QA with Visua
 You will need:
 
 * A local development environment with [Node JS/NPM](https://docs.npmjs.com/getting-started/installing-node)
-* [Google Chrome](https://www.google.com/chrome/)
 * A live, web-accessible WordPress site
 * Another environment of the WordPress site above (e.g. local, staging, etc.)
 
 ### Getting The Code
 
-Create a new repository from this template and then either using Git clone or download the `.zip` file of your copy.
+Create a new repository from this template and then either use Git to clone the repository or download the `.zip` file.
 
 ## Instructions
 
