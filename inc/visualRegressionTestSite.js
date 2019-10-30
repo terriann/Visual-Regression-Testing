@@ -15,7 +15,7 @@ module.exports = function (siteToTest) {
 
     // Throw an error if it doesn't
     if (!siteExists) {
-        throwError(colors.red(`${colors.bold(siteToTest)} is not a valid site. Check the name you entered against the ${colors.grey('sitesToTest.js')} config file`));
+        throwError(`${colors.bold(siteToTest)} is not a valid site. Check the name you entered against the ${colors.grey('sitesToTest.js')} config file`);
     }
 
     const site = sitesToTest[siteToTest];
@@ -38,7 +38,7 @@ module.exports = function (siteToTest) {
         backstop('test', {
             config: currentConfig
         }).then(() => {
-            log(colors.bgGreen(`Backstop JS tests passed for ${site.label}!`));
+            log(colors.bgGreen(colors.white(`Backstop JS tests passed for ${site.label}!`)));
         }).catch(() => {
             log(colors.bgRed(colors.white(`Backstop JS tests failed for ${site.label}!`)));
         });

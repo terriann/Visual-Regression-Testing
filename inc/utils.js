@@ -1,5 +1,9 @@
+// External dependencies
+const colors = require('ansi-colors');
+const log = require('fancy-log');
+
 exports.throwError = function throwError(message) {
-    console.error(message);
+    log(colors.bgRed(colors.white(message)));
     process.exit(0);
 };
 

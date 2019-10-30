@@ -35,11 +35,19 @@ program
 // Process the arguments
 program.parse(process.argv);
 
-// If a site was specified, use it
+function testSite (site) {
+    if (Object.prototype.hasOwnProperty.call(sitesToTest, site) ) {
+        visualRegressionTestSite(site);
+    } else {
+        throwError(`'${site}' could not be found in the site list.`);
+    }
+}
+
+// If a site was specified by the user, use it
 if (program.site) {
-    visualRegressionTestSite(program.site);
+    testSite(program.site);
 } else {
-    // Build the site choices
+    // Otherwise, ask which site should be used
     let siteChoices = [];
 
     for (let [key, value] of Object.entries(sitesToTest)) {
@@ -49,7 +57,10 @@ if (program.site) {
         });
     }
 
-    // Ask which site should be used
+    if (!siteChoices.length) {
+        throwError(`No sites found in the site list`);
+    }
+
     inquirer
         .prompt([{
             type: 'list',
@@ -59,7 +70,7 @@ if (program.site) {
         }])
         .then(answers => {
             if (Object.prototype.hasOwnProperty.call(answers, 'site')) {
-                visualRegressionTestSite(answers.site);
+                testSite(answers.site);
             }
         });
-}
+    }
