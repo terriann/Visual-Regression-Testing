@@ -1,6 +1,7 @@
 const untrailingSlashIt = require('./utils').untrailingSlashIt;
 const trailingSlashIt = require('./utils').trailingSlashIt;
 const leadingSlashIt = require('./utils').leadingSlashIt;
+const rootPath = require('./utils').rootPath;
 
 module.exports = function backstopConfig(nonProductionBaseUrl, productionBaseUrl, pathsToTest, siteName) {
 
@@ -32,6 +33,7 @@ module.exports = function backstopConfig(nonProductionBaseUrl, productionBaseUrl
             'delay': delayTime,
             'misMatchThreshold': acceptableThreshold
         }],
+        onReadyScript: 'onReadyScript.js',
         'paths': {
             'ci_report': `${backstopDataDir}/ci_report`,
             'json_report': `${backstopDataDir}/json_report`,
@@ -40,7 +42,7 @@ module.exports = function backstopConfig(nonProductionBaseUrl, productionBaseUrl
             'bitmaps_test': `${backstopDataDir}/bitmaps_test`,
             'compare_data': `${backstopDataDir}/bitmaps_test/compare.json`,
             'casper_scripts': `${backstopDataDir}/casper_scripts`,
-            'engine_scripts': `${backstopDataDir}/engine_scripts`
+            'engine_scripts': `${rootPath}/inc/${siteName}`
         },
         'engine': 'puppeteer',
         'report': ['browser', 'json'],
