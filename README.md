@@ -20,7 +20,7 @@ Create a new repository from this template and then either use Git to clone the 
 
 After setting up the repository locally (see above) you will need to:
 
-1. Run the command `npm install` to download dependencies
+1. Run the command [`npm ci`](https://docs.npmjs.com/cli/ci.html) to download dependencies
     * This only needs to be done once
 1. Run the command `npm run start`
     * Select the site you want to test from the list
