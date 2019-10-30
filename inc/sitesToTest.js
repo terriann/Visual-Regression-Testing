@@ -1,4 +1,13 @@
 module.exports = {
+    "ataylorme": {
+        label: "ataylor.me",
+        productionBaseUrl: "https://ataylor.me",
+        nonProductionBaseUrl: "https://ataylorme-wordpress.lndo.site",
+        pathsToTest: [
+            "/contact/",
+            "/about/",
+        ]
+    },
     "return-to-pantheon-test": {
         label: "Return to Pantheon Test",
         productionBaseUrl: "https://live-return-to-pantheon-test.pantheonsite.io/",
