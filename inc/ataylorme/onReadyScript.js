@@ -31,7 +31,6 @@ function waitForNetworkIdle(page, timeout, maxInflightRequests = 0) {
     }
 }
 
-//eslint-disable-next-line
 module.exports = async (page, scenario, vp) => {
     // Remove the cookie notice
      await page.$eval('#wp-gdpr-cookie-notice', e => e.parentNode.removeChild(e));
