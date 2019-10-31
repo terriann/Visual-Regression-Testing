@@ -31,6 +31,7 @@ function waitForNetworkIdle(page, timeout, maxInflightRequests = 0) {
     }
 }
 
+//eslint-disable-next-line
 module.exports = async (page, scenario, vp) => {
     // Remove the cookie notice
      await page.$eval('#wp-gdpr-cookie-notice', e => e.parentNode.removeChild(e));
@@ -42,17 +43,17 @@ module.exports = async (page, scenario, vp) => {
             await page.waitForSelector(menuToggleButtonSelector, {
                 timeout: 250,
                 visible: true
-            })
-            await page.click(menuToggleButtonSelector)
+            });
+            await page.click(menuToggleButtonSelector);
         } catch (error) {
-            console.log("Could not find the menu toggle button.")
+            console.log("Could not find the menu toggle button.");
         }
     }
 
     // Wait for AMP lazy-loaded images
 
     // Scroll to the bottom of the page
-    await page.evaluate(_ => {
+    await page.evaluate( () => {
         window.scrollBy(0, window.innerHeight);
     });
 
