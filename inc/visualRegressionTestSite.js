@@ -27,10 +27,13 @@ module.exports = function (siteToTest) {
     log(colors.bgYellow(`Running visual regression tests on ${boldLabel}...\n`));
 
     // Generate site specific configuration.
-    const currentConfig = backstopConfig(site.nonProductionBaseUrl, site.productionBaseUrl, site.pathsToTest, siteToTest);
+    const currentConfig = backstopConfig({
+      ...site,
+      siteToTest,
+    });
 
     // Disable logging since BackstopJS is noisy
-    // console.log = function () {};
+    console.log = function () {};
 
     backstop('reference', {
         config: currentConfig

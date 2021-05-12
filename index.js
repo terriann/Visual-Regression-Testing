@@ -26,7 +26,7 @@ if (siteNames.length === 0) {
 const program = new commander.Command();
 
 // Set the program version
-program.version('1.0.0');
+program.version("1.1.0");
 
 // Allow site name to be passed as an option
 program
