@@ -12,6 +12,10 @@ The original repository was removed from GitHub by the author, but having found 
 
 [![Andrew Taylor: Automating Your QA with Visual Regression Testing on WordPress.tv](https://videos.files.wordpress.com/njIOur4Y/video-c8360bfd3f_scruberthumbnail_0.jpg)](https://wordpress.tv/2019/11/19/andrew-taylor-automating-your-qa-with-visual-regression-testing-part-1/)
 
+Update: Feb 20, 2020
+
+Looks like @davidneedham is going to [carry the torch on this presentation](https://visual-regression.davidneedham.me/) & [repo](https://github.com/davidneedham/visual-regression-testing-workshop)! Look there for updates & improvements.
+
 ----
 
 ## Tools & Technologies
