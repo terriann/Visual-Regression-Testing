@@ -1,6 +1,9 @@
 #Backstop JS
 backstop_data
 
+# Ignore configuration because this is the skeleton repo.
+/inc/sitesToTest.js
+
 # Logs
 logs
 *.log
@@ -59,4 +62,3 @@ typings/
 
 # dotenv environment variables file
 .env
-
