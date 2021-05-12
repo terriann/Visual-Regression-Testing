@@ -1,8 +1,8 @@
 // Rename this file to `sitesToTest.js` which is ignored in this skeleton repo.
 
 module.exports = {
-  "VIP Docs": {
-    label: "Vip Docs",
+  "Sample Site": {
+    label: "sample site",
     productionBaseUrl: "https://example.com/",
     nonProductionBaseUrl: "https://staging.example.com/",
 
